@@ -1,22 +1,18 @@
-import pip
+import subprocess
+import sys
 
-try:
-    pip.main(['install', 'streamlit'])
-    print("Streamlit installation successful!")
-except Exception as e:
-    print(f"Error installing Streamlit: {e}")
+# Function to install a package
+def install_package(package_name):
+    try:
+        subprocess.check_call([sys.executable, "-m", "pip", "install", package_name])
+        print(f"{package_name} installed successfully!")
+    except subprocess.CalledProcessError as e:
+        print(f"Error installing {package_name}: {e}")
 
-try:
-    pip.main(['install', 'google.generativeai'])
-    print("google.generativeai installed successfully!")
-except Exception as e:
-    print(f"Error installing google.generativeai: {e}")
-
-try:
-    pip.main(['install', 'python-dotenv'])
-    print("google.generativeai installed successfully!")
-except Exception as e:
-    print(f"Error installing google.generativeai: {e}")
+# Auto-install the necessary libraries
+install_package('streamlit')
+install_package('google-generativeai')
+install_package('python-dotenv')
 
 
 ########### Import the required packages ############
