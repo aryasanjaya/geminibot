@@ -1,27 +1,4 @@
-import subprocess
-import sys
 
-def install(package):
-    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
-
-# Install necessary packages
-try:
-    install('streamlit')
-    print("Streamlit installation successful!")
-except Exception as e:
-    print(f"Error installing Streamlit: {e}")
-
-try:
-    install('google-generativeai')
-    print("google.generativeai installation successful!")
-except Exception as e:
-    print(f"Error installing google.generativeai: {e}")
-
-try:
-    install('python-dotenv')
-    print("python-dotenv installation successful!")
-except Exception as e:
-    print(f"Error installing python-dotenv: {e}")
 
 ########### Import the required packages ############
 import streamlit as st
