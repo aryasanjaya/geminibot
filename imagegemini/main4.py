@@ -6,6 +6,18 @@ try:
 except Exception as e:
     print(f"Error installing Streamlit: {e}")
 
+try:
+    pip.main(['install', 'google.generativeai'])
+    print("google.generativeai installed successfully!")
+except Exception as e:
+    print(f"Error installing google.generativeai: {e}")
+
+try:
+    pip.main(['install', 'python-dotenv'])
+    print("google.generativeai installed successfully!")
+except Exception as e:
+    print(f"Error installing google.generativeai: {e}")
+
 
 ########### Import the required packages ############
 import streamlit as st
