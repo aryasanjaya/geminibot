@@ -1,3 +1,7 @@
+!pip install streamlit
+!pip install google.generativeai
+!pip install python-dotenv
+
 ########### Import the required packages ############
 import streamlit as st
 import google.generativeai as genai  # Google Generative AI package for text generation
