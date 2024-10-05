@@ -1,6 +1,11 @@
-!pip install streamlit
-!pip install google.generativeai
-!pip install python-dotenv
+import pip
+
+try:
+    pip.main(['install', 'streamlit'])
+    print("Streamlit installation successful!")
+except Exception as e:
+    print(f"Error installing Streamlit: {e}")
+
 
 ########### Import the required packages ############
 import streamlit as st
